@@ -1,7 +1,14 @@
 let mongoose = require('mongoose');
 
-const server = '127.0.0.1:27017'; // REPLACE WITH YOUR DB SERVER
-const database = 'fcc-Mail';      // REPLACE WITH YOUR DB NAME
+let newSchema = new mongoose.Schema({
+    courseName: String,
+    assignmentName: String,
+    required:true,
+    dueDate: Date
+  })
+
+const server = ''; // REPLACE WITH YOUR DB SERVER
+const database = '';      // REPLACE WITH YOUR DB NAME
 
 class Database {
   constructor() {
