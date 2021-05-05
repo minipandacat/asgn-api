@@ -1,6 +1,6 @@
 console.log(process.env);
 const mongoose = require(mongoose);
-mongoose.connect(process.env.MONGO_URI {useNewURLParser: true});
+mongoose.connect(process.env.MONGO_URI, {useNewURLParser: true});
 
 var bodyParser = require('body-parser')
 app.use(bodyParser.json());
