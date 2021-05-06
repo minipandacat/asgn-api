@@ -1,0 +1,1 @@
+var createNew = require('..models/updateAssgn-model.js');

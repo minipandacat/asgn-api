@@ -5,7 +5,18 @@ app.use(express.static('public'));
 var bodyParser = require('body-parser')
 app.use(bodyParser.json());
 
-var personRoute = require('./asgn-router/')
+var listRoute=require('./routes/listAll');
+var createRoute=require('./routes/createNew');
+var retrieveRoute=require('./routes/retrieveAssgn');
+var updateRoute=require('./routes/udpateAssgn');
+var delRoute=require('./routes/delAssgn');
+
+app.use(listRoute);
+app.use(createRoute);
+app.use(retrieveRoute);
+app.use(updateRoute);
+app.use(delRoute);
+
 
 app.get('/', (req, res) => {
     res.send('Successful response.');
