@@ -5,6 +5,10 @@ router.get('/listAll', (req, res) =>{
 })
 
 router.get('/listAll/:assign', (req, res) => {
+    res.send(`You have requested to list all assignments using params: ${req.query.assign}`);
+  });
+
+router.get('/listAll/:assign', (req, res) => {
   res.send(`You have requested to list all assignments using params: ${req.params.assign}`);
 });
 
