@@ -8,3 +8,15 @@ app.use(bodyParser.json());
 const express = require('express');
 const app = express();
 app.use(express.static('public'));
+
+app.get('/', (req, res) => {
+    res.send('Successful response.');
+  });
+
+const server = ''; // REPLACE WITH YOUR DB SERVER
+const database = '';      // REPLACE WITH YOUR DB NAME
+
+class Database {
+  constructor() {
+    this._connect()
+  };
