@@ -20,3 +20,5 @@ class Database {
   constructor() {
     this._connect()
   };
+}
+
